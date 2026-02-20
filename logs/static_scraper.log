@@ -1,0 +1,62 @@
+2026-02-08 14:23:17,472 - static_scraper - INFO - Starting static scraping of https://quotes.toscrape.com/
+2026-02-08 14:23:18,408 - static_scraper - INFO - Successfully scraped https://quotes.toscrape.com/
+2026-02-08 23:46:23,136 - static_scraper - INFO - Starting static scraping of https://quotes.toscrape.com/
+2026-02-08 23:46:24,085 - static_scraper - INFO - Successfully scraped https://quotes.toscrape.com/
+2026-02-08 23:48:10,870 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-08 23:48:10,989 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 19:07:17,980 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 19:07:19,131 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 19:41:15,546 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 19:41:15,657 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 19:51:09,949 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 19:51:10,093 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 19:58:44,056 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 19:58:44,195 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 20:22:15,258 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 20:22:15,362 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 20:34:10,235 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 20:34:10,313 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 23:24:58,229 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 23:24:58,232 - static_scraper - WARNING - Request error (attempt 1): HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D54E1F9D0>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:25:00,235 - static_scraper - WARNING - Request error (attempt 2): HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D6D4DA710>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:25:03,238 - static_scraper - WARNING - Request error (attempt 3): HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D6D4DAC10>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:25:03,239 - static_scraper - ERROR - Error scraping https://www.geeksforgeeks.org/: HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D6D4DAC10>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:26:06,347 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 23:26:06,350 - static_scraper - WARNING - Request error (attempt 1): HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D54E1D950>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:26:08,352 - static_scraper - WARNING - Request error (attempt 2): HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D54D2E710>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:26:11,355 - static_scraper - WARNING - Request error (attempt 3): HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D6D4DAE90>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:26:11,355 - static_scraper - ERROR - Error scraping https://www.geeksforgeeks.org/: HTTPSConnectionPool(host='www.geeksforgeeks.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023D6D4DAE90>: Failed to resolve 'www.geeksforgeeks.org' ([Errno 11001] getaddrinfo failed)"))
+2026-02-15 23:27:12,005 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 23:27:12,110 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 23:30:00,728 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 23:30:00,928 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 23:56:44,752 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 23:56:45,029 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-15 23:58:40,358 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-15 23:58:41,391 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 00:01:44,164 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 00:01:44,318 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 00:03:09,499 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 00:03:09,673 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 00:05:45,530 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 00:05:45,680 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 00:06:55,930 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 00:06:56,065 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 00:07:30,630 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 00:07:30,764 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 00:10:10,557 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 00:10:10,711 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 00:21:08,857 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 00:21:08,931 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 22:34:42,356 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 22:34:42,514 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 23:04:42,730 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 23:04:42,808 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 23:18:59,832 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 23:18:59,920 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 23:25:13,600 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 23:25:13,679 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 23:26:33,728 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 23:26:33,845 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
+2026-02-16 23:43:46,606 - static_scraper - INFO - Starting static scraping of https://www.geeksforgeeks.org/
+2026-02-16 23:43:46,689 - static_scraper - INFO - Successfully scraped https://www.geeksforgeeks.org/
