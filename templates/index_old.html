@@ -1,0 +1,313 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Ethical Web Scraper{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-primary text-white p-5 rounded mb-4">
+            <h1 class="display-4">
+                <i class="fas fa-spider me-3"></i>Ethical Web Scraper
+            </h1>
+            <p class="lead">
+                A production-ready web scraping tool with ethical compliance, CAPTCHA detection, and robust error handling.
+            </p>
+            <hr class="my-4 border-white">
+            <p>
+                Scrape static and dynamic websites with respect for robots.txt, rate limiting, and data validation.
+            </p>
+            <a class="btn btn-light btn-lg" href="{{ url_for('scrape') }}" role="button">
+                <i class="fas fa-play me-2"></i>Start Scraping
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Quick Stats -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Statistics</h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-6">
+                        <h3 class="text-primary">{{ recent_results|length }}</h3>
+                        <small class="text-muted">Recent Scrapes</small>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="text-success">{{ active_sessions|length }}</h3>
+                        <small class="text-muted">Active Sessions</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="col-md-8 mb-4">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ url_for('scrape') }}" class="btn btn-primary w-100">
+                            <i class="fas fa-search me-2"></i>New Scraping Job
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <button class="btn btn-secondary w-100" onclick="showHelp()">
+                            <i class="fas fa-question-circle me-2"></i>Help
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Active Sessions -->
+{% if active_sessions %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0"><i class="fas fa-spinner me-2"></i>Active Scraping Sessions</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>URL</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for session_id, session in active_sessions.items() %}
+                            <tr>
+                                <td>
+                                    <a href="{{ session.url }}" target="_blank" class="text-decoration-none">
+                                        {{ session.url[:50] }}{% if session.url|length > 50 %}...{% endif %}
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="badge bg-{{ 'primary' if session.type == 'dynamic' else 'secondary' }}">
+                                        {{ session.type|title }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-{{ 
+                                        'success' if session.status == 'completed' else
+                                        'danger' if session.status == 'error' else
+                                        'warning' if session.status == 'stopped' else
+                                        'info'
+                                    }}">
+                                        {{ session.status|title }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar" role="progressbar" data-progress="{{ session.get('progress', 0) }}">
+                                            {{ session.get('progress', 0) }}%
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">{{ session.get('current_step', 'Initializing') }}</small>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('status', session_id=session_id) }}" class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        {% if session.status not in ['completed', 'error', 'stopped'] %}
+                                        <button class="btn btn-outline-danger" onclick="stopScraping('{{ session_id }}')">
+                                            <i class="fas fa-stop"></i>
+                                        </button>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Recent Results -->
+{% if recent_results %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0"><i class="fas fa-history me-2"></i>Recent Scraping Results</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>URL</th>
+                                <th>Timestamp</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for result in recent_results %}
+                            <tr>
+                                <td>
+                                    <a href="{{ result.url }}" target="_blank" class="text-decoration-none">
+                                        {{ result.url[:60] }}{% if result.url|length > 60 %}...{% endif %}
+                                    </a>
+                                </td>
+                                <td>{{ result.timestamp }}</td>
+                                <td>
+                                    <span class="badge bg-{{ 
+                                        'success' if result.status == 'success' else
+                                        'danger' if result.status == 'error' else
+                                        'warning'
+                                    }}">
+                                        {{ result.status|title }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-info" onclick="viewResult('{{ result.file }}')">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-success" onclick="downloadResult('{{ result.file }}', 'json')">
+                                            <i class="fas fa-download"></i> JSON
+                                        </button>
+                                        <button class="btn btn-outline-secondary" onclick="downloadResult('{{ result.file }}', 'csv')">
+                                            <i class="fas fa-file-csv"></i> CSV
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Help Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-question-circle me-2"></i>Help & Guide</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Getting Started</h6>
+                <ol>
+                    <li>Click "New Scraping Job" to start scraping a website</li>
+                    <li>Enter the URL and choose scraping type (static/dynamic/auto)</li>
+                    <li>Optionally provide custom configuration</li>
+                    <li>Monitor progress in real-time</li>
+                    <li>Download results in JSON or CSV format</li>
+                </ol>
+                
+                <h6 class="mt-4">Scraping Types</h6>
+                <ul>
+                    <li><strong>Static:</strong> For simple HTML pages (faster)</li>
+                    <li><strong>Dynamic:</strong> For JavaScript-heavy sites (slower but more accurate)</li>
+                    <li><strong>Auto:</strong> Automatically detects the best method</li>
+                </ul>
+                
+                <h6 class="mt-4">Ethical Compliance</h6>
+                <ul>
+                    <li>Respects robots.txt rules</li>
+                    <li>Implements rate limiting</li>
+                    <li>Detects and stops on CAPTCHAs</li>
+                    <li>Uses descriptive user agents</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Set progress bar widths dynamically
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('.progress-bar[data-progress]');
+    progressBars.forEach(function(bar) {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = progress + '%';
+    });
+});
+
+function stopScraping(sessionId) {
+    if (confirm('Are you sure you want to stop this scraping session?')) {
+        fetch(`/api/stop/${sessionId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error stopping scraping: ' + data.error);
+            }
+        })
+        .catch(error => {
+            alert('Error stopping scraping: ' + error);
+        });
+    }
+}
+
+function showHelp() {
+    const modal = new bootstrap.Modal(document.getElementById('helpModal'));
+    modal.show();
+}
+
+function viewResult(filename) {
+    window.open(`/data/${filename}`, '_blank');
+}
+
+function downloadResult(filename, format) {
+    // Extract session_id from filename
+    const parts = filename.split('_');
+    if (parts.length >= 3) {
+        const sessionId = parts[2];
+        window.open(`/download/${sessionId}/${format}`, '_blank');
+    }
+}
+
+// Auto-refresh active sessions
+setInterval(function() {
+    const runningBadges = document.querySelectorAll('.badge');
+    let hasRunning = false;
+    runningBadges.forEach(function(badge) {
+        if (badge.textContent.toLowerCase().includes('running')) {
+            hasRunning = true;
+        }
+    });
+    if (hasRunning) {
+        location.reload();
+    }
+}, 5000);
+</script>
+{% endblock %}

@@ -1,0 +1,623 @@
+{% extends "base.html" %}
+
+{% block title %}Scraping Status - Ethical Web Scraper{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="fw-bold">
+                    <i class="fas fa-chart-line me-3"></i>Scraping Status
+                </h1>
+                <p class="text-muted mb-0">Monitor your scraping progress in real-time</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="btn btn-light">
+                <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Session Info Card -->
+<div class="row mb-4">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Session Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="text-muted small">URL</label>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-globe text-primary me-2"></i>
+                            <a href="{{ session.url }}" target="_blank" class="text-decoration-none">
+                                {{ session.url[:50] }}{% if session.url|length > 50 %}...{% endif %}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted small">Type</label>
+                        <div>
+                            <span class="badge bg-{{ 'primary' if session.type == 'dynamic' else 'secondary' }} px-3 py-2">
+                                <i class="fas fa-{{ 'code' if session.type == 'dynamic' else 'file-code' }} me-1"></i>
+                                {{ session.type|title }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted small">Status</label>
+                        <div>
+                            <span class="badge bg-{{ 
+                                'success' if session.status == 'completed' else
+                                'danger' if session.status == 'error' else
+                                'warning' if session.status == 'stopped' else
+                                'info'
+                            }} px-3 py-2">
+                                <i class="fas fa-{{ 
+                                    'check' if session.status == 'completed' else
+                                    'times' if session.status == 'error' else
+                                    'stop' if session.status == 'stopped' else
+                                    'spinner fa-spin'
+                                }} me-1"></i>
+                                {{ session.status|title }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted small">Session ID</label>
+                        <div class="font-monospace small">
+                            {{ session_id }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="stat-card">
+            <i class="fas fa-clock fa-2x mb-2 text-primary"></i>
+            <div class="stat-number">{{ session.get('progress', 0) }}%</div>
+            <p class="text-muted mb-0">Progress</p>
+        </div>
+    </div>
+</div>
+
+<!-- Progress Section -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-tasks me-2"></i>Progress</h5>
+            </div>
+            <div class="card-body">
+                <div class="progress mb-3" style="height: 30px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                         role="progressbar" 
+                         data-progress="{{ session.get('progress', 0) }}"
+                         id="mainProgressBar">
+                        {{ session.get('progress', 0) }}%
+                    </div>
+                </div>
+                
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="p-3 rounded bg-light">
+                            <i class="fas fa-play-circle fa-2x text-success mb-2"></i>
+                            <h6>Started</h6>
+                            <p class="mb-0 small">{{ session.started_at.strftime('%H:%M:%S') if session.started_at else 'N/A' }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 rounded bg-light">
+                            <i class="fas fa-spinner fa-2x text-primary mb-2 fa-spin"></i>
+                            <h6>Current Step</h6>
+                            <p class="mb-0 small">{{ session.get('current_step', 'Initializing') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 rounded bg-light">
+                            <i class="fas fa-hourglass-half fa-2x text-warning mb-2"></i>
+                            <h6>Duration</h6>
+                            <p class="mb-0 small" id="duration">Calculating...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 rounded bg-light">
+                            <i class="fas fa-flag-checkered fa-2x text-info mb-2"></i>
+                            <h6>Completed</h6>
+                            <p class="mb-0 small">{{ session.ended_at.strftime('%H:%M:%S') if session.ended_at else 'In Progress' }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Results Section -->
+{% if result %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-chart-bar me-2"></i>Scraping Results
+                    <span class="badge bg-{{ 'success' if result.status == 'success' else 'danger' }} ms-2">
+                        {{ result.status }}
+                    </span>
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if result.status == 'success' %}
+                <div class="row g-3 mb-4">
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-file-alt fa-2x mb-2 text-primary"></i>
+                            <div class="stat-number">{{ result.data.pages_scraped or 0 }}</div>
+                            <p class="text-muted mb-0">Pages Scraped</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-link fa-2x mb-2 text-success"></i>
+                            <div class="stat-number">{{ result.data.links_found or 0 }}</div>
+                            <p class="text-muted mb-0">Links Found</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-image fa-2x mb-2 text-info"></i>
+                            <div class="stat-number">{{ result.data.images_found or 0 }}</div>
+                            <p class="text-muted mb-0">Images Found</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-heading fa-2x mb-2 text-warning"></i>
+                            <div class="stat-number">{{ result.data.headings_found or 0 }}</div>
+                            <p class="text-muted mb-0">Headings Found</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Statistics Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-paragraph fa-2x mb-2 text-secondary"></i>
+                            <div class="stat-number">{{ result.data.paragraphs_found or 0 }}</div>
+                            <p class="text-muted mb-0">Paragraphs</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-table fa-2x mb-2 text-warning"></i>
+                            <div class="stat-number">{{ result.data.forms_found or 0 }}</div>
+                            <p class="text-muted mb-0">Forms Found</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-font fa-2x mb-2 text-info"></i>
+                            <div class="stat-number">{{ result.data.word_count or 0 }}</div>
+                            <p class="text-muted mb-0">Word Count</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <i class="fas fa-text-width fa-2x mb-2 text-primary"></i>
+                            <div class="stat-number">{{ result.data.character_count or 0 }}</div>
+                            <p class="text-muted mb-0">Characters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Options -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="{{ url_for('download', session_id=session_id, format='json') }}" class="btn btn-primary">
+                        <i class="fas fa-download me-2"></i>Download JSON
+                    </a>
+                    <a href="{{ url_for('download', session_id=session_id, format='csv') }}" class="btn btn-success">
+                        <i class="fas fa-file-csv me-2"></i>Download CSV
+                    </a>
+                    <button class="btn btn-info" onclick="previewData()">
+                        <i class="fas fa-eye me-2"></i>Preview Data
+                    </button>
+                </div>
+
+                <!-- Enhanced Data Preview Modal -->
+                <div class="modal" id="dataPreviewModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
+                    <div class="modal-dialog" style="position: relative; margin: 20px auto; max-width: 95%; width: 1400px; max-height: 95vh;">
+                        <div class="modal-content" style="background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); display: flex; flex-direction: column; height: 100%;">
+                            <div class="modal-header" style="padding: 20px 30px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px 12px 0 0;">
+                                <h5 style="margin: 0; font-size: 20px;">
+                                    <i class="fas fa-chart-line me-2"></i>Scraped Data Preview
+                                </h5>
+                                <button type="button" onclick="closePreviewModal()" style="background: none; border: none; font-size: 28px; cursor: pointer; color: white; opacity: 0.8;">&times;</button>
+                            </div>
+                            <div class="modal-body" style="padding: 30px; overflow-y: auto; flex: 1;">
+                                
+                                <!-- 1️⃣ Scraped Page Details -->
+                                <div class="preview-section mb-4">
+                                    <h6 class="section-title" style="color: #667eea; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center;">
+                                        <i class="fas fa-file-alt me-2"></i>Scraped Page Details
+                                    </h6>
+                                    {% if result.tables.pages %}
+                                        {% for page in result.tables.pages[:1] %}
+                                        <div class="card" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="mb-2"><strong>Page URL:</strong><br><a href="{{ page.url }}" target="_blank" style="word-break: break-all;">{{ page.url }}</a></p>
+                                                        <p class="mb-2"><strong>Page Title:</strong><br>{{ page.title or 'N/A' }}</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="mb-2"><strong>HTTP Status Code:</strong><br>
+                                                            <span class="badge {% if page.http_status_code == 200 %}bg-success{% elif page.http_status_code >= 400 %}bg-danger{% else %}bg-warning{% endif %}">
+                                                                {{ page.http_status_code or 'N/A' }}
+                                                            </span>
+                                                        </p>
+                                                        <p class="mb-2"><strong>Response Time:</strong><br>{{ page.response_time_ms or 'N/A' }} ms</p>
+                                                        <p class="mb-2"><strong>Word Count:</strong><br>{{ result.data.word_count or 0 }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    {% else %}
+                                        <p class="text-muted">No page data available</p>
+                                    {% endif %}
+                                </div>
+
+                                <!-- 2️⃣ Links Preview -->
+                                <div class="preview-section mb-4">
+                                    <h6 class="section-title" style="color: #667eea; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center;">
+                                        <i class="fas fa-link me-2"></i>Links Preview (Top 10)
+                                    </h6>
+                                    {% if result.tables.links %}
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-hover" style="font-size: 13px;">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Link URL</th>
+                                                        <th>Link Text</th>
+                                                        <th>Type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for link in result.tables.links[:10] %}
+                                                    <tr>
+                                                        <td>{{ link.link_number }}</td>
+                                                        <td><a href="{{ link.link_url }}" target="_blank" style="word-break: break-all;">{{ link.link_url[:80] }}{% if link.link_url|length > 80 %}...{% endif %}</a></td>
+                                                        <td>{{ link.link_text[:50] }}{% if link.link_text|length > 50 %}...{% endif %}</td>
+                                                        <td>
+                                                            {% if link.is_external %}
+                                                                <span class="badge bg-warning text-dark">External</span>
+                                                            {% else %}
+                                                                <span class="badge bg-success">Internal</span>
+                                                            {% endif %}
+                                                        </td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {% if result.tables.links|length > 10 %}
+                                            <p class="text-muted mt-2">... and {{ result.tables.links|length - 10 }} more links</p>
+                                        {% endif %}
+                                    {% else %}
+                                        <p class="text-muted">No links found</p>
+                                    {% endif %}
+                                </div>
+
+                                <!-- 3️⃣ Images Preview -->
+                                <div class="preview-section mb-4">
+                                    <h6 class="section-title" style="color: #667eea; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center;">
+                                        <i class="fas fa-image me-2"></i>Images Preview (Top 5)
+                                    </h6>
+                                    {% if result.tables.images %}
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-hover" style="font-size: 13px;">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Image URL</th>
+                                                        <th>Alt Text</th>
+                                                        <th>Type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for image in result.tables.images[:5] %}
+                                                    <tr>
+                                                        <td>{{ loop.index }}</td>
+                                                        <td><a href="{{ image.image_src }}" target="_blank" style="word-break: break-all;">{{ image.image_src[:80] }}{% if image.image_src|length > 80 %}...{% endif %}</a></td>
+                                                        <td>{{ image.image_alt[:30] }}{% if image.image_alt|length > 30 %}...{% endif %}</td>
+                                                        <td>
+                                                            {% if image.is_external %}
+                                                                <span class="badge bg-warning text-dark">External</span>
+                                                            {% else %}
+                                                                <span class="badge bg-success">Internal</span>
+                                                            {% endif %}
+                                                        </td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {% if result.tables.images|length > 5 %}
+                                            <p class="text-muted mt-2">... and {{ result.tables.images|length - 5 }} more images</p>
+                                        {% endif %}
+                                    {% else %}
+                                        <p class="text-muted">No images found</p>
+                                    {% endif %}
+                                </div>
+
+                                <!-- 4️⃣ Headings Breakdown -->
+                                <div class="preview-section mb-4">
+                                    <h6 class="section-title" style="color: #667eea; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center;">
+                                        <i class="fas fa-heading me-2"></i>Headings Breakdown
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card text-center" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                                <div class="card-body p-3">
+                                                    <h4 class="text-primary mb-1">H1</h4>
+                                                    <p class="mb-0" style="font-size: 24px; font-weight: bold;">{{ result.data.headings_found or 0 }}</p>
+                                                    <small class="text-muted">Main Headings</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card text-center" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                                <div class="card-body p-3">
+                                                    <h4 class="text-success mb-1">H2</h4>
+                                                    <p class="mb-0" style="font-size: 24px; font-weight: bold;">-</p>
+                                                    <small class="text-muted">Sub Headings</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card text-center" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                                <div class="card-body p-3">
+                                                    <h4 class="text-warning mb-1">H3</h4>
+                                                    <p class="mb-0" style="font-size: 24px; font-weight: bold;">-</p>
+                                                    <small class="text-muted">Minor Headings</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 5️⃣ Content Summary -->
+                                <div class="preview-section">
+                                    <h6 class="section-title" style="color: #667eea; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center;">
+                                        <i class="fas fa-chart-bar me-2"></i>Content Summary
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card text-center" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                                <div class="card-body p-3">
+                                                    <i class="fas fa-file-alt fa-2x mb-2 text-primary"></i>
+                                                    <h5 class="mb-1">{{ result.data.pages_scraped or 0 }}</h5>
+                                                    <small class="text-muted">Pages Scraped</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card text-center" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                                <div class="card-body p-3">
+                                                    <i class="fas fa-paragraph fa-2x mb-2 text-info"></i>
+                                                    <h5 class="mb-1">{{ result.data.paragraphs_found or 0 }}</h5>
+                                                    <small class="text-muted">Paragraphs Found</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card text-center" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                                <div class="card-body p-3">
+                                                    <i class="fas fa-font fa-2x mb-2 text-success"></i>
+                                                    <h5 class="mb-1">{{ result.data.word_count or 0 }}</h5>
+                                                    <small class="text-muted">Word Count</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card text-center" style="border: 1px solid #e9ecef; border-radius: 8px;">
+                                                <div class="card-body p-3">
+                                                    <i class="fas fa-text-width fa-2x mb-2 text-warning"></i>
+                                                    <h5 class="mb-1">{{ result.data.character_count or 0 }}</h5>
+                                                    <small class="text-muted">Character Count</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer" style="padding: 20px 30px; border-top: 1px solid #dee2e6; background: #f8f9fa; border-radius: 0 0 12px 12px;">
+                                <button type="button" onclick="closePreviewModal()" class="btn btn-secondary">
+                                    <i class="fas fa-times me-2"></i>Close Preview
+                                </button>
+                                <a href="{{ url_for('download', session_id=session_id, format='json') }}" class="btn btn-primary">
+                                    <i class="fas fa-download me-2"></i>Download JSON
+                                </a>
+                                <a href="{{ url_for('download', session_id=session_id, format='csv') }}" class="btn btn-success">
+                                    <i class="fas fa-file-csv me-2"></i>Download CSV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% else %}
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>Error:</strong> {{ result.error or 'Unknown error occurred' }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Actions Section -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-cog me-2"></i>Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-2 flex-wrap">
+                    {% if session.status not in ['completed', 'error', 'stopped'] %}
+                    <button class="btn btn-danger" onclick="stopScraping()">
+                        <i class="fas fa-stop me-2"></i>Stop Scraping
+                    </button>
+                    {% endif %}
+                    <button class="btn btn-secondary" onclick="refreshStatus()">
+                        <i class="fas fa-sync me-2"></i>Refresh Status
+                    </button>
+                    <a href="{{ url_for('scrape') }}" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>New Scraping Task
+                    </a>
+                    <a href="{{ url_for('index') }}" class="btn btn-light">
+                        <i class="fas fa-home me-2"></i>Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Session Error Details -->
+{% if session.status == 'error' and session.get('error_details') %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card border-danger">
+            <div class="card-header bg-danger text-white">
+                <h6 class="mb-0"><i class="fas fa-bug me-2"></i>Error Details</h6>
+            </div>
+            <div class="card-body">
+                <pre class="bg-light p-3 rounded" style="font-size: 0.8rem; max-height: 300px; overflow-y: auto;">{{ session.error_details }}</pre>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<script>
+// Set progress bar width
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBar = document.getElementById('mainProgressBar');
+    if (progressBar) {
+        const progress = progressBar.getAttribute('data-progress');
+        progressBar.style.width = progress + '%';
+    }
+    
+    // Update duration
+    updateDuration();
+    setInterval(updateDuration, 1000);
+});
+
+function updateDuration() {
+    const startedAt = '{{ session.started_at.isoformat() if session.started_at else "" }}';
+    const endedAt = '{{ session.ended_at.isoformat() if session.ended_at else "" }}';
+    
+    if (startedAt) {
+        const start = new Date(startedAt);
+        const end = endedAt ? new Date(endedAt) : new Date();
+        const duration = Math.floor((end - start) / 1000);
+        
+        const hours = Math.floor(duration / 3600);
+        const minutes = Math.floor((duration % 3600) / 60);
+        const seconds = duration % 60;
+        
+        let durationText = '';
+        if (hours > 0) durationText += hours + 'h ';
+        if (minutes > 0) durationText += minutes + 'm ';
+        durationText += seconds + 's';
+        
+        const durationEl = document.getElementById('duration');
+        if (durationEl) {
+            durationEl.textContent = durationText;
+        }
+    }
+}
+
+function stopScraping() {
+    if (confirm('Are you sure you want to stop this scraping session?')) {
+        fetch(`/api/stop/{{ session_id }}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error stopping scraping: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error stopping scraping');
+        });
+    }
+}
+
+function refreshStatus() {
+    location.reload();
+}
+
+function previewData() {
+    try {
+        document.getElementById('dataPreviewModal').style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } catch (error) {
+        console.error('Error showing modal:', error);
+        alert('Error opening data preview. Please try again.');
+    }
+}
+
+function closePreviewModal() {
+    try {
+        document.getElementById('dataPreviewModal').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore background scrolling
+    } catch (error) {
+        console.error('Error closing modal:', error);
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('dataPreviewModal');
+    if (event.target === modal) {
+        closePreviewModal();
+    }
+});
+
+// Close modal with ESC key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closePreviewModal();
+    }
+});
+
+// Auto-refresh for active sessions
+var sessionStatus = '{{ session.status }}';
+var inactiveStatuses = ['completed', 'error', 'stopped'];
+if (!inactiveStatuses.includes(sessionStatus)) {
+    setTimeout(function() {
+        location.reload();
+    }, 5000);
+}
+</script>
+{% endblock %}

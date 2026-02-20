@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Ethical Web Scraper{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="text-center text-white p-5 rounded-4" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)); backdrop-filter: blur(10px);">
+            <h1 class="display-4 fw-bold mb-4">
+                <i class="fas fa-spider me-3"></i>Ethical Web Scraper
+            </h1>
+            <p class="lead mb-4">
+                A production-ready web scraping tool with ethical compliance, CAPTCHA detection, and robust error handling.
+            </p>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center gap-3">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x mb-2"></i>
+                            <p class="mb-0">Ethical Scraping</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-robot fa-2x mb-2"></i>
+                            <p class="mb-0">CAPTCHA Detection</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-tachometer-alt fa-2x mb-2"></i>
+                            <p class="mb-0">Rate Limiting</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-check-circle fa-2x mb-2"></i>
+                            <p class="mb-0">Data Validation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold" href="{{ url_for('scrape') }}" role="button">
+                <i class="fas fa-play me-2"></i>Start Scraping Now
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="row mb-5">
+    <div class="col-md-4 mb-4">
+        <div class="stat-card">
+            <i class="fas fa-clock fa-3x mb-3 text-primary"></i>
+            <div class="stat-number">{{ recent_results|length }}</div>
+            <p class="text-muted mb-0">Recent Scrapes</p>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="stat-card">
+            <i class="fas fa-spinner fa-3x mb-3 text-success"></i>
+            <div class="stat-number">{{ active_sessions|length }}</div>
+            <p class="text-muted mb-0">Active Sessions</p>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="stat-card">
+            <i class="fas fa-globe fa-3x mb-3 text-info"></i>
+            <div class="stat-number">∞</div>
+            <p class="text-muted mb-0">Websites Supported</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Quick Actions -->
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ url_for('scrape') }}" class="btn btn-primary w-100 py-3">
+                            <i class="fas fa-plus me-2"></i>New Scraping Task
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <button class="btn btn-success w-100 py-3" onclick="window.location.reload()">
+                            <i class="fas fa-sync me-2"></i>Refresh Dashboard
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h6 class="mb-3"><i class="fas fa-star me-2"></i>Key Features</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                <span>Static & Dynamic Scraping</span>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                <span>Real-time Progress Tracking</span>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                <span>JSON & CSV Export</span>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                <span>Robots.txt Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Results -->
+    <div class="col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-history me-2"></i>Recent Results</h5>
+            </div>
+            <div class="card-body">
+                {% if recent_results %}
+                    {% for result in recent_results[:5] %}
+                    <div class="d-flex justify-content-between align-items-center mb-3 p-2 rounded bg-light">
+                        <div>
+                            <small class="text-muted">{{ result.timestamp }}</small><br>
+                            <strong>{{ result.url[:30] }}{% if result.url|length > 30 %}...{% endif %}</strong>
+                        </div>
+                        <div class="text-end">
+                            <span class="badge bg-{{ 'success' if result.status == 'success' else 'danger' }}">
+                                {{ result.status }}
+                            </span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="text-center text-muted py-4">
+                        <i class="fas fa-inbox fa-3x mb-3"></i>
+                        <p>No recent scraping results</p>
+                        <a href="{{ url_for('scrape') }}" class="btn btn-primary btn-sm">
+                            <i class="fas fa-plus me-1"></i>Start Scraping
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Active Sessions -->
+{% if active_sessions %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-spinner me-2"></i>Active Sessions</h5>
+            </div>
+            <div class="card-body">
+                {% for session_id, session in active_sessions.items() %}
+                <div class="row align-items-center mb-3 p-3 rounded bg-light">
+                    <div class="col-md-4">
+                        <strong>{{ session.url[:50] }}{% if session.url|length > 50 %}...{% endif %}</strong>
+                        <br><small class="text-muted">Type: {{ session.type }}</small>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar" role="progressbar" 
+                                 data-progress="{{ session.get('progress', 0) }}">
+                                {{ session.get('progress', 0) }}%
+                            </div>
+                        </div>
+                        <small class="text-muted">{{ session.get('current_step', 'Initializing') }}</small>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <a href="{{ url_for('status', session_id=session_id) }}" class="btn btn-primary btn-sm">
+                            <i class="fas fa-eye me-1"></i>View
+                        </a>
+                        {% if session.status not in ['completed', 'error', 'stopped'] %}
+                        <button class="btn btn-danger btn-sm ms-2" onclick="stopScraping('{{ session_id }}')">
+                            <i class="fas fa-stop me-1"></i>Stop
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Help Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-question-circle me-2"></i>How to Use</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-play text-primary me-2"></i>Getting Started</h6>
+                        <ol>
+                            <li>Click "Start Scraping Now"</li>
+                            <li>Enter the website URL</li>
+                            <li>Choose scraping type</li>
+                            <li>Click "Start Scraping"</li>
+                            <li>Monitor progress in real-time</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-cog text-info me-2"></i>Scraping Types</h6>
+                        <ul>
+                            <li><strong>Static:</strong> HTML-based websites</li>
+                            <li><strong>Dynamic:</strong> JavaScript-heavy sites</li>
+                            <li><strong>Auto:</strong> Automatic detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Ethical Notice:</strong> This scraper respects robots.txt, implements rate limiting, and does not bypass CAPTCHAs.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="{{ url_for('scrape') }}" class="btn btn-primary">Start Scraping</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Action Button -->
+<button class="fab" data-bs-toggle="modal" data-bs-target="#helpModal">
+    <i class="fas fa-question"></i>
+</button>
+
+<script>
+// Set progress bar widths dynamically
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('.progress-bar[data-progress]');
+    progressBars.forEach(function(bar) {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = progress + '%';
+    });
+});
+
+function stopScraping(sessionId) {
+    if (confirm('Are you sure you want to stop this scraping session?')) {
+        fetch(`/api/stop/${sessionId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error stopping scraping: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error stopping scraping');
+        });
+    }
+}
+</script>
+{% endblock %}

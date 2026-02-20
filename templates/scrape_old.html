@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block title %}Scrape Website - Ethical Web Scraper{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2><i class="fas fa-search me-2"></i>Scrape Website</h2>
+        <p class="text-muted">Enter a website URL to scrape content ethically and reliably.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="fas fa-globe me-2"></i>Scraping Configuration</h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" id="scrapeForm">
+                    <div class="mb-3">
+                        <label for="url" class="form-label">Website URL *</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-link"></i></span>
+                            <input type="url" class="form-control" id="url" name="url" 
+                                   placeholder="https://example.com" required>
+                        </div>
+                        <div class="form-text">Enter the complete URL including http:// or https://</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="scraping_type" class="form-label">Scraping Type</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scraping_type" 
+                                           id="static" value="static" checked>
+                                    <label class="form-check-label" for="static">
+                                        <i class="fas fa-file-code me-1"></i>Static
+                                    </label>
+                                    <small class="d-block text-muted">Fast, for simple HTML pages</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scraping_type" 
+                                           id="dynamic" value="dynamic">
+                                    <label class="form-check-label" for="dynamic">
+                                        <i class="fas fa-code me-1"></i>Dynamic
+                                    </label>
+                                    <small class="d-block text-muted">For JavaScript-heavy sites</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="scraping_type" 
+                                           id="auto" value="auto">
+                                    <label class="form-check-label" for="auto">
+                                        <i class="fas fa-magic me-1"></i>Auto
+                                    </label>
+                                    <small class="d-block text-muted">Automatically detect</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="custom_config" class="form-label">
+                            <i class="fas fa-cog me-1"></i>Custom Configuration (Optional)
+                        </label>
+                        <textarea class="form-control" id="custom_config" name="custom_config" 
+                                  rows="6" placeholder='{"delay": 2.0, "timeout": 30}'></textarea>
+                        <div class="form-text">
+                            JSON configuration for advanced options. 
+                            <a href="#" onclick="showConfigHelp()">Show help</a>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-primary" id="scrapeBtn">
+                            <i class="fas fa-play me-2"></i>Start Scraping
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <!-- Ethical Compliance -->
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h6 class="mb-0"><i class="fas fa-shield-alt me-2"></i>Ethical Compliance</h6>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        Respects robots.txt
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        Rate limiting
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        CAPTCHA detection
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        Proper headers
+                    </li>
+                    <li class="mb-0">
+                        <i class="fas fa-check text-success me-2"></i>
+                        Error handling
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h6 class="mb-0"><i class="fas fa-lightbulb me-2"></i>Tips</h6>
+            </div>
+            <div class="card-body">
+                <ul class="small mb-0">
+                    <li>Start with "Auto" type for best results</li>
+                    <li>Use custom config for specific sites</li>
+                    <li>Monitor progress in real-time</li>
+                    <li>Download results in multiple formats</li>
+                    <li>Check logs for troubleshooting</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Config Help Modal -->
+<div class="modal fade" id="configHelpModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-cog me-2"></i>Configuration Help</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Basic Options</h6>
+                <pre><code>{
+  "delay": 1.0,           // Delay between requests (seconds)
+  "timeout": 30,          // Request timeout (seconds)
+  "max_retries": 3,       // Maximum retry attempts
+  "headless": true,       // Run browser in headless mode
+  "wait_strategy": "networkidle"  // Wait strategy for dynamic content
+}</code></pre>
+
+                <h6 class="mt-4">Advanced Selectors</h6>
+                <pre><code>{
+  "selectors": {
+    "title": ["title", "h1", ".title"],
+    "content": ["main", "article", ".content"],
+    "links": ["a[href]"],
+    "images": ["img[src]"]
+  }
+}</code></pre>
+
+                <h6 class="mt-4">Rate Limiting</h6>
+                <pre><code>{
+  "rate_limiting": {
+    "requests_per_second": 1,
+    "burst_size": 5,
+    "delay_after_burst": 5.0
+  }
+}</code></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="insertExampleConfig()">Insert Example</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function showConfigHelp() {
+    const modal = new bootstrap.Modal(document.getElementById('configHelpModal'));
+    modal.show();
+}
+
+function insertExampleConfig() {
+    const exampleConfig = {
+        delay: 1.0,
+        timeout: 30,
+        max_retries: 3,
+        headless: true,
+        wait_strategy: "networkidle",
+        selectors: {
+            title: ["title", "h1", ".title"],
+            content: ["main", "article", ".content"],
+            links: ["a[href]"],
+            images: ["img[src]"]
+        }
+    };
+    
+    document.getElementById('custom_config').value = JSON.stringify(exampleConfig, null, 2);
+    
+    const modal = bootstrap.Modal.getInstance(document.getElementById('configHelpModal'));
+    modal.hide();
+    
+    showAlert('Example configuration inserted!', 'success');
+}
+
+function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+    alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    const container = document.querySelector('.container');
+    container.insertBefore(alertDiv, container.firstChild);
+    
+    // Auto-dismiss after 5 seconds
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 5000);
+}
+
+// Form validation
+document.getElementById('scrapeForm').addEventListener('submit', function(e) {
+    const url = document.getElementById('url').value;
+    const configText = document.getElementById('custom_config').value;
+    
+    // Validate URL
+    try {
+        new URL(url);
+    } catch {
+        e.preventDefault();
+        showAlert('Please enter a valid URL', 'danger');
+        return;
+    }
+    
+    // Validate config if provided
+    if (configText.trim()) {
+        try {
+            JSON.parse(configText);
+        } catch {
+            e.preventDefault();
+            showAlert('Invalid JSON configuration', 'danger');
+            return;
+        }
+    }
+    
+    // Disable submit button to prevent double submission
+    const submitBtn = document.getElementById('scrapeBtn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Starting...';
+});
+</script>
+{% endblock %}

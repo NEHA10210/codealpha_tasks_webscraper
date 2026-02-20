@@ -1,0 +1,288 @@
+{% extends "base.html" %}
+
+{% block title %}Scraping Status - Ethical Web Scraper{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="fas fa-chart-line me-2"></i>Scraping Status</h2>
+            <div>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <!-- Session Info -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Session Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>URL:</strong><br>
+                        <a href="{{ session.url }}" target="_blank">{{ session.url }}</a>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Type:</strong><br>
+                        <span class="badge bg-{{ 'primary' if session.type == 'dynamic' else 'secondary' }}">
+                            {{ session.type|title }}
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <strong>Status:</strong><br>
+                        <span class="badge bg-{{ 
+                            'success' if session.status == 'completed' else
+                            'danger' if session.status == 'error' else
+                            'warning' if session.status == 'stopped' else
+                            'info'
+                        }}">
+                            {{ session.status|title }}
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Started:</strong><br>
+                        {{ session.started_at.strftime('%Y-%m-%d %H:%M:%S') if session.started_at else 'N/A' }}
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <strong>Progress:</strong>
+                        <div class="progress mt-2" style="height: 25px;">
+                            <div class="progress-bar" role="progressbar" 
+                                 data-progress="{{ session.get('progress', 0) }}">
+                                {{ session.get('progress', 0) }}%
+                            </div>
+                        </div>
+                        <small class="text-muted">{{ session.get('current_step', 'Initializing') }}</small>
+                    </div>
+                </div>
+                
+                {% if session.status not in ['completed', 'error', 'stopped'] %}
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <button class="btn btn-danger btn-sm" onclick="stopScraping('{{ session_id }}')">
+                            <i class="fas fa-stop me-2"></i>Stop Scraping
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm ms-2" onclick="refreshStatus()">
+                            <i class="fas fa-sync me-2"></i>Refresh
+                        </button>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Results -->
+        {% if result %}
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="fas fa-check-circle me-2"></i>Scraping Results</h5>
+            </div>
+            <div class="card-body">
+                {% if result.status == 'success' %}
+                    <!-- Statistics -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h4 class="text-primary">{{ result.statistics.content_length }}</h4>
+                                <small class="text-muted">Characters</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h4 class="text-success">{{ result.statistics.word_count }}</h4>
+                                <small class="text-muted">Words</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h4 class="text-info">{{ result.statistics.links_count }}</h4>
+                                <small class="text-muted">Links</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h4 class="text-warning">{{ result.statistics.images_count }}</h4>
+                                <small class="text-muted">Images</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metadata -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h6><i class="fas fa-info-circle me-2"></i>Page Information</h6>
+                            <table class="table table-sm">
+                                <tr>
+                                    <th>Title:</th>
+                                    <td>{{ result.metadata.title or 'N/A' }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Description:</th>
+                                    <td>{{ result.metadata.description or 'N/A' }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Language:</th>
+                                    <td>{{ result.metadata.language or 'N/A' }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Content Preview -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h6><i class="fas fa-file-alt me-2"></i>Content Preview</h6>
+                            <div class="border rounded p-3" style="max-height: 300px; overflow-y: auto;">
+                                {% if result.data %}
+                                    {% for item in result.data[:1] %}
+                                        <p><strong>{{ item.url }}</strong></p>
+                                        <p>{{ item.text_content[:500] }}{% if item.text_content|length > 500 %}...{% endif %}</p>
+                                    {% endfor %}
+                                {% else %}
+                                    <p class="text-muted">No content available</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Options -->
+                    <div class="row">
+                        <div class="col-12">
+                            <h6><i class="fas fa-download me-2"></i>Download Results</h6>
+                            <div class="btn-group">
+                                <a href="{{ url_for('download', session_id=session_id, format='json') }}" 
+                                   class="btn btn-success">
+                                    <i class="fas fa-file-code me-2"></i>Download JSON
+                                </a>
+                                <a href="{{ url_for('download', session_id=session_id, format='csv') }}" 
+                                   class="btn btn-primary">
+                                    <i class="fas fa-file-csv me-2"></i>Download CSV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                {% else %}
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Error:</strong> {{ result.error }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Session Error Details -->
+        {% if session.status == 'error' and session.get('error_details') %}
+        <div class="card mt-4">
+            <div class="card-header bg-danger text-white">
+                <h6 class="mb-0"><i class="fas fa-bug me-2"></i>Error Details</h6>
+            </div>
+            <div class="card-body">
+                <pre class="bg-light p-3 rounded" style="font-size: 0.8rem; max-height: 300px; overflow-y: auto;">{{ session.error_details }}</pre>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="col-md-4">
+        <!-- Real-time Updates -->
+        {% if session.status not in ['completed', 'error', 'stopped'] %}
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h6 class="mb-0"><i class="fas fa-sync me-2"></i>Real-time Updates</h6>
+            </div>
+            <div class="card-body text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2 mb-0">Scraping in progress...</p>
+                <small class="text-muted">Auto-refreshing every 5 seconds</small>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Tips -->
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h6 class="mb-0"><i class="fas fa-lightbulb me-2"></i>Tips</h6>
+            </div>
+            <div class="card-body">
+                <ul class="small">
+                    <li>Wait for scraping to complete before downloading</li>
+                    <li>Large websites may take several minutes</li>
+                    <li>Check logs if scraping fails</li>
+                    <li>Results are automatically saved</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Set progress bar widths dynamically
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('.progress-bar[data-progress]');
+    progressBars.forEach(function(bar) {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = progress + '%';
+    });
+});
+
+function stopScraping(sessionId) {
+    if (confirm('Are you sure you want to stop this scraping session?')) {
+        fetch(`/api/stop/${sessionId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error stopping scraping: ' + data.error);
+            }
+        })
+        .catch(function(error) {
+            alert('Error stopping scraping: ' + error);
+        });
+    }
+}
+
+function refreshStatus() {
+    location.reload();
+}
+
+// Auto-refresh for running sessions
+var sessionStatus = '{{ session.status }}';
+if (sessionStatus !== 'completed' && sessionStatus !== 'error' && sessionStatus !== 'stopped') {
+    setInterval(function() {
+        fetch(`/api/status/{{ session_id }}`)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                if (data.session.status !== sessionStatus) {
+                    location.reload();
+                }
+            });
+    }, 5000);
+}
+</script>
+{% endblock %}
