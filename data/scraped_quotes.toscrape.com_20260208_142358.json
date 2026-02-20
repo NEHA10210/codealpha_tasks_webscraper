@@ -1,0 +1,470 @@
+[
+  {
+    "url": "https://quotes.toscrape.com/",
+    "title": "Quotes to Scrape",
+    "description": "",
+    "scraped_at": "2026-02-08T14:23:18.401024",
+    "scraping_method": "static",
+    "text_content": "Quotes to Scrape Login “The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.” by Albert Einstein (about) Tags: change deep-thoughts thinking world “It is our choices, Harry, that show what we truly are, far more than our abilities.” by J.K. Rowling (about) Tags: abilities choices “There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.” by Albert Einstein (about) Tags: inspirational life live miracle miracles “The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.” by Jane Austen (about) Tags: aliteracy books classic humor “Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.” by Marilyn Monroe (about) Tags: be-yourself inspirational “Try not to become a man of success. Rather become a man of value.” by Albert Einstein (about) Tags: adulthood success value “It is better to be hated for what you are than to be loved for what you are not.” by André Gide (about) Tags: life love “I have not failed. I've just found 10,000 ways that won't work.” by Thomas A. Edison (about) Tags: edison failure inspirational paraphrased “A woman is like a tea bag; you never know how strong it is until it's in hot water.” by Eleanor Roosevelt (about) Tags: misattributed-eleanor-roosevelt “A day without sunshine is like, you know, night.” by Steve Martin (about) Tags: humor obvious simile Next → Top Ten tags love inspirational life humor books reading friendship friends truth simile Quotes by: GoodReads.com Made with ❤ by Zyte",
+    "paragraphs_count": 2,
+    "headings_count": 2,
+    "links_count": 49,
+    "images_count": 0,
+    "forms_count": 0
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 1,
+    "link_url": "https://quotes.toscrape.com/",
+    "link_text": "Quotes to Scrape",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 2,
+    "link_url": "https://quotes.toscrape.com/login",
+    "link_text": "Login",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 3,
+    "link_url": "https://quotes.toscrape.com/author/Albert-Einstein",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 4,
+    "link_url": "https://quotes.toscrape.com/tag/change/page/1/",
+    "link_text": "change",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 5,
+    "link_url": "https://quotes.toscrape.com/tag/deep-thoughts/page/1/",
+    "link_text": "deep-thoughts",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 6,
+    "link_url": "https://quotes.toscrape.com/tag/thinking/page/1/",
+    "link_text": "thinking",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 7,
+    "link_url": "https://quotes.toscrape.com/tag/world/page/1/",
+    "link_text": "world",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 8,
+    "link_url": "https://quotes.toscrape.com/author/J-K-Rowling",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 9,
+    "link_url": "https://quotes.toscrape.com/tag/abilities/page/1/",
+    "link_text": "abilities",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 10,
+    "link_url": "https://quotes.toscrape.com/tag/choices/page/1/",
+    "link_text": "choices",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 11,
+    "link_url": "https://quotes.toscrape.com/tag/inspirational/page/1/",
+    "link_text": "inspirational",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 12,
+    "link_url": "https://quotes.toscrape.com/tag/life/page/1/",
+    "link_text": "life",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 13,
+    "link_url": "https://quotes.toscrape.com/tag/live/page/1/",
+    "link_text": "live",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 14,
+    "link_url": "https://quotes.toscrape.com/tag/miracle/page/1/",
+    "link_text": "miracle",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 15,
+    "link_url": "https://quotes.toscrape.com/tag/miracles/page/1/",
+    "link_text": "miracles",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 16,
+    "link_url": "https://quotes.toscrape.com/author/Jane-Austen",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 17,
+    "link_url": "https://quotes.toscrape.com/tag/aliteracy/page/1/",
+    "link_text": "aliteracy",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 18,
+    "link_url": "https://quotes.toscrape.com/tag/books/page/1/",
+    "link_text": "books",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 19,
+    "link_url": "https://quotes.toscrape.com/tag/classic/page/1/",
+    "link_text": "classic",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 20,
+    "link_url": "https://quotes.toscrape.com/tag/humor/page/1/",
+    "link_text": "humor",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 21,
+    "link_url": "https://quotes.toscrape.com/author/Marilyn-Monroe",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 22,
+    "link_url": "https://quotes.toscrape.com/tag/be-yourself/page/1/",
+    "link_text": "be-yourself",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 23,
+    "link_url": "https://quotes.toscrape.com/tag/adulthood/page/1/",
+    "link_text": "adulthood",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 24,
+    "link_url": "https://quotes.toscrape.com/tag/success/page/1/",
+    "link_text": "success",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 25,
+    "link_url": "https://quotes.toscrape.com/tag/value/page/1/",
+    "link_text": "value",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 26,
+    "link_url": "https://quotes.toscrape.com/author/Andre-Gide",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 27,
+    "link_url": "https://quotes.toscrape.com/tag/love/page/1/",
+    "link_text": "love",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 28,
+    "link_url": "https://quotes.toscrape.com/author/Thomas-A-Edison",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 29,
+    "link_url": "https://quotes.toscrape.com/tag/edison/page/1/",
+    "link_text": "edison",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 30,
+    "link_url": "https://quotes.toscrape.com/tag/failure/page/1/",
+    "link_text": "failure",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 31,
+    "link_url": "https://quotes.toscrape.com/tag/paraphrased/page/1/",
+    "link_text": "paraphrased",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 32,
+    "link_url": "https://quotes.toscrape.com/author/Eleanor-Roosevelt",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 33,
+    "link_url": "https://quotes.toscrape.com/tag/misattributed-eleanor-roosevelt/page/1/",
+    "link_text": "misattributed-eleanor-roosevelt",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 34,
+    "link_url": "https://quotes.toscrape.com/author/Steve-Martin",
+    "link_text": "(about)",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 35,
+    "link_url": "https://quotes.toscrape.com/tag/obvious/page/1/",
+    "link_text": "obvious",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 36,
+    "link_url": "https://quotes.toscrape.com/tag/simile/page/1/",
+    "link_text": "simile",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 37,
+    "link_url": "https://quotes.toscrape.com/page/2/",
+    "link_text": "Next →",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 38,
+    "link_url": "https://quotes.toscrape.com/tag/love/",
+    "link_text": "love",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 39,
+    "link_url": "https://quotes.toscrape.com/tag/inspirational/",
+    "link_text": "inspirational",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 40,
+    "link_url": "https://quotes.toscrape.com/tag/life/",
+    "link_text": "life",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 41,
+    "link_url": "https://quotes.toscrape.com/tag/humor/",
+    "link_text": "humor",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 42,
+    "link_url": "https://quotes.toscrape.com/tag/books/",
+    "link_text": "books",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 43,
+    "link_url": "https://quotes.toscrape.com/tag/reading/",
+    "link_text": "reading",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 44,
+    "link_url": "https://quotes.toscrape.com/tag/friendship/",
+    "link_text": "friendship",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 45,
+    "link_url": "https://quotes.toscrape.com/tag/friends/",
+    "link_text": "friends",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 46,
+    "link_url": "https://quotes.toscrape.com/tag/truth/",
+    "link_text": "truth",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 47,
+    "link_url": "https://quotes.toscrape.com/tag/simile/",
+    "link_text": "simile",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 48,
+    "link_url": "https://www.goodreads.com/quotes",
+    "link_text": "GoodReads.com",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "link",
+    "link_number": 49,
+    "link_url": "https://www.zyte.com",
+    "link_text": "Zyte",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "heading",
+    "heading_number": 1,
+    "heading_level": 1,
+    "heading_text": "Quotes to Scrape"
+  },
+  {
+    "url": "https://quotes.toscrape.com/",
+    "record_type": "heading",
+    "heading_number": 2,
+    "heading_level": 2,
+    "heading_text": "Top Ten tags"
+  }
+]

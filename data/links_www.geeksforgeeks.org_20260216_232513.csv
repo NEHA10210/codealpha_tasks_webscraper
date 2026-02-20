@@ -1,0 +1,84 @@
+page_id,link_number,link_url,link_text,link_title,is_external,scraped_at
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,1,https://www.geeksforgeeks.org/,,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,2,https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/,DSA,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,3,https://www.geeksforgeeks.org/explore,Practice Problems,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,4,https://www.geeksforgeeks.org/c/c-programming-language/,C,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,5,https://www.geeksforgeeks.org/cpp/c-plus-plus/,C++,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,6,https://www.geeksforgeeks.org/java/java/,Java,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,7,https://www.geeksforgeeks.org/python/python-programming-language-tutorial/,Python,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,8,https://www.geeksforgeeks.org/javascript/javascript-tutorial/,JavaScript,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,9,https://www.geeksforgeeks.org/data-science/data-science-for-beginners/,Data Science,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,10,https://www.geeksforgeeks.org/machine-learning/machine-learning/,Machine Learning,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,11,https://www.geeksforgeeks.org/courses,Courses,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,12,https://www.geeksforgeeks.org/linux-unix/linux-tutorial/,Linux,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,13,https://www.geeksforgeeks.org/devops/devops-tutorial/,DevOps,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,14,https://www.geeksforgeeks.org/courses/dsa-self-paced,DSA Online,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,15,https://www.geeksforgeeks.org/courses/data-science-live,Master DS & ML,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,16,https://www.geeksforgeeks.org/connect/home,Explore Now,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,17,https://www.geeksforgeeks.org/courses/interviewe-101-data-structures-algorithm-system-design/,4.9Tech Interview 101 - DSA and System DesignBeginner to Advanced399k+ interested GeeksGet 90% Refund,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,18,https://www.geeksforgeeks.org/courses/Java-backend-live/,4.6Java Backend Development with AI - LiveIntermediate and Advanced396k+ interested GeeksGet 90% Refund,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,19,https://www.geeksforgeeks.org/courses/generative-ai-training-program/,5.0Generative AI Training Program - LiveBeginner to Advanced42k+ interested GeeksGet 90% Refund,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,20,https://www.geeksforgeeks.org/courses/devops-live/,4.7DevOps Engineering with AI : Planning to ProductionBeginner to Advanced157k+ interested GeeksGet 90% Refund,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,21,https://www.geeksforgeeks.org/courses/cpp-programming-basic-to-advanced/,4.7C++ Programming - Self PacedBeginner to Advanced315k+ interested GeeksGet 90% Refund,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,22,https://www.geeksforgeeks.org/courses/java-online-course-complete-beginner-to-advanced/,4.6Java Programming - Self PacedBeginner to Advanced423k+ interested GeeksGet 90% Refund,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,23,https://www.geeksforgeeks.org/jobs,Jobs for you,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,24,https://www.geeksforgeeks.org/gfg-hiring-solutions-for-recruiters/,Hire with us,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,25,https://www.geeksforgeeks.org/advertise-with-us/,Advertise with Us,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,26,https://www.geeksforgeeks.org/campus-training-program/,Placement Training Program,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,27,https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial/,Data Structure and AlgorithmsView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,28,https://www.geeksforgeeks.org/web-development/,Web DevelopmentView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,29,https://www.geeksforgeeks.org/ai-ml-ds/,AI ML & Data ScienceView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,30,https://www.geeksforgeeks.org/machine-learning/,Machine LearningView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,31,https://www.geeksforgeeks.org/python-programming-language/,PythonView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,32,https://www.geeksforgeeks.org/system-design-tutorial/,System DesignView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,33,https://www.geeksforgeeks.org/devops-tutorial/,DevOpsView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,34,https://www.geeksforgeeks.org/computer-science-fundamentals/programming-language-tutorials/,Programming LanguagesView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,35,https://www.geeksforgeeks.org/software-engineering/articles-on-computer-science-subjects-gq/,CS SubjectsView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,36,https://www.geeksforgeeks.org/blogs/geeksforgeeks-practice-best-online-coding-platform/,Practice DSAView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,37,https://www.geeksforgeeks.org/interview-prep/interview-corner/,Interview PreparationView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,38,https://www.geeksforgeeks.org/sql/guide-to-databases/,DatabasesView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,39,https://www.geeksforgeeks.org/websites-apps/software-and-tools-a-to-z-list/,Software & ToolsView more,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,40,https://www.geeksforgeeks.org/design-and-analysis-of-algorithms/,Analysis of Algorithms,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,41,https://www.geeksforgeeks.org/array-data-structure/,Array,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,42,https://www.geeksforgeeks.org/data-structures/linked-list/,Linked List,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,43,https://www.geeksforgeeks.org/searching-algorithms/,Searching Algorithms,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,44,https://www.geeksforgeeks.org/stack-data-structure/,Stack,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,45,https://www.geeksforgeeks.org/sorting-algorithms/,Sorting Algorithms,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,46,https://www.geeksforgeeks.org/hashing-data-structure/,Hashing,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,47,https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/,Graph,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,48,https://in.linkedin.com/company/geeksforgeeks,,,True,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,49,https://www.instagram.com/geeks_for_geeks/,,,True,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,50,https://twitter.com/geeksforgeeks,,,True,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,51,https://www.facebook.com/geeksforgeeks.org/,,,True,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,52,https://www.youtube.com/geeksforgeeksvideos,,,True,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,53,https://geeksforgeeksapp.page.link/gfg-app,,,True,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,54,https://www.geeksforgeeks.org/about/,About Us,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,55,https://www.geeksforgeeks.org/legal/,Legal,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,56,https://www.geeksforgeeks.org/legal/privacy-policy/,Privacy Policy,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,57,https://www.geeksforgeeks.org/jobs?search=geeksforgeeks&tab_type=featured,Careers,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,58,https://www.geeksforgeeks.org/about/contact-us/,Contact Us,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,59,https://www.geeksforgeeks.org/gfg-corporate-solution/,Corporate Solution,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,60,https://www.geeksforgeeks.org/problem-of-the-day,POTD,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,61,https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions,Practice Problems,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,62,https://www.geeksforgeeks.org/category/blogs/?type=recent,Blogs,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,63,https://www.geeksforgeeks.org/web-tech/web-technology/,Web Technology,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,64,https://www.geeksforgeeks.org/machine-learning/ai-ml-and-data-science-tutorial-learn-ai-ml-and-data-science/,"AI, ML & Data Science",,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,65,https://www.geeksforgeeks.org/gate/gate-exam-tutorial/,CS Core Subjects,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,66,https://www.geeksforgeeks.org/gfg-academy/geeksforgeeks-school/,School Subjects,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,67,https://www.geeksforgeeks.org/courses/category/machine-learning-data-science,ML and Data Science,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,68,https://www.geeksforgeeks.org/courses/category/dsa-placements,DSA and Placements,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,69,https://www.geeksforgeeks.org/courses/category/development-testing,Web Development,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,70,https://www.geeksforgeeks.org/courses/category/programming-languages,Programming Languages,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,71,https://www.geeksforgeeks.org/courses/category/cloud-devops,DevOps & Cloud,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,72,https://www.geeksforgeeks.org/courses/category/gate,GATE,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,73,https://www.geeksforgeeks.org/courses/category/trending-technologies/,Trending Technologies,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,74,https://www.geeksforgeeks.org/courses/offline-courses?city=noida,Noida,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,75,https://www.geeksforgeeks.org/courses/offline-courses?city=bengaluru,Bengaluru,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,76,https://www.geeksforgeeks.org/courses/offline-courses?city=pune,Pune,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,77,https://www.geeksforgeeks.org/courses/offline-courses?city=hyderabad,Hyderabad,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,78,https://www.geeksforgeeks.org/courses/offline-courses?selectedOfflineCity=Kolkata,Kolkata,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,79,https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/,Aptitude,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,80,https://www.geeksforgeeks.org/aptitude/puzzles/,Puzzles,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,81,https://www.geeksforgeeks.org/courses/gfg-160-series,GfG 160,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,82,https://www.geeksforgeeks.org/system-design/system-design-tutorial/,System Design,,False,2026-02-16T17:55:13.653527+00:00
+9b8161c1-7d2f-4041-bd78-688a75e4b6ae,83,https://www.geeksforgeeks.org/copyright-information/,All rights reserved,,False,2026-02-16T17:55:13.653527+00:00

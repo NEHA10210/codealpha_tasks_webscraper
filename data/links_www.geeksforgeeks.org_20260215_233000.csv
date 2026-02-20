@@ -1,0 +1,84 @@
+page_id,link_number,link_url,link_text,link_title,is_external
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,1,https://www.geeksforgeeks.org/,,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,2,https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/,DSA,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,3,https://www.geeksforgeeks.org/explore,Practice Problems,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,4,https://www.geeksforgeeks.org/c/c-programming-language/,C,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,5,https://www.geeksforgeeks.org/cpp/c-plus-plus/,C++,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,6,https://www.geeksforgeeks.org/java/java/,Java,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,7,https://www.geeksforgeeks.org/python/python-programming-language-tutorial/,Python,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,8,https://www.geeksforgeeks.org/javascript/javascript-tutorial/,JavaScript,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,9,https://www.geeksforgeeks.org/data-science/data-science-for-beginners/,Data Science,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,10,https://www.geeksforgeeks.org/machine-learning/machine-learning/,Machine Learning,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,11,https://www.geeksforgeeks.org/courses,Courses,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,12,https://www.geeksforgeeks.org/linux-unix/linux-tutorial/,Linux,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,13,https://www.geeksforgeeks.org/devops/devops-tutorial/,DevOps,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,14,https://www.geeksforgeeks.org/courses/dsa-self-paced,DSA Online,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,15,https://www.geeksforgeeks.org/courses/data-science-live,Master DS & ML,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,16,https://www.geeksforgeeks.org/connect/home,Explore Now,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,17,https://www.geeksforgeeks.org/courses/interviewe-101-data-structures-algorithm-system-design/,4.9Tech Interview 101 - DSA and System DesignBeginner to Advanced399k+ interested GeeksGet 90% Refund,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,18,https://www.geeksforgeeks.org/courses/Java-backend-live/,4.6Java Backend Development with AI - LiveIntermediate and Advanced395k+ interested GeeksGet 90% Refund,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,19,https://www.geeksforgeeks.org/courses/generative-ai-training-program/,5.0Generative AI Training Program - LiveBeginner to Advanced42k+ interested GeeksGet 90% Refund,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,20,https://www.geeksforgeeks.org/courses/devops-live/,4.7DevOps Engineering with AI : Planning to ProductionBeginner to Advanced157k+ interested GeeksGet 90% Refund,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,21,https://www.geeksforgeeks.org/courses/cpp-programming-basic-to-advanced/,4.7C++ Programming - Self PacedBeginner to Advanced315k+ interested GeeksGet 90% Refund,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,22,https://www.geeksforgeeks.org/courses/java-online-course-complete-beginner-to-advanced/,4.6Java Programming - Self PacedBeginner to Advanced423k+ interested GeeksGet 90% Refund,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,23,https://www.geeksforgeeks.org/jobs,Jobs for you,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,24,https://www.geeksforgeeks.org/gfg-hiring-solutions-for-recruiters/,Hire with us,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,25,https://www.geeksforgeeks.org/advertise-with-us/,Advertise with Us,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,26,https://www.geeksforgeeks.org/campus-training-program/,Placement Training Program,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,27,https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial/,Data Structure and AlgorithmsView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,28,https://www.geeksforgeeks.org/web-development/,Web DevelopmentView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,29,https://www.geeksforgeeks.org/ai-ml-ds/,AI ML & Data ScienceView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,30,https://www.geeksforgeeks.org/machine-learning/,Machine LearningView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,31,https://www.geeksforgeeks.org/python-programming-language/,PythonView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,32,https://www.geeksforgeeks.org/system-design-tutorial/,System DesignView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,33,https://www.geeksforgeeks.org/devops-tutorial/,DevOpsView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,34,https://www.geeksforgeeks.org/computer-science-fundamentals/programming-language-tutorials/,Programming LanguagesView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,35,https://www.geeksforgeeks.org/software-engineering/articles-on-computer-science-subjects-gq/,CS SubjectsView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,36,https://www.geeksforgeeks.org/blogs/geeksforgeeks-practice-best-online-coding-platform/,Practice DSAView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,37,https://www.geeksforgeeks.org/interview-prep/interview-corner/,Interview PreparationView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,38,https://www.geeksforgeeks.org/sql/guide-to-databases/,DatabasesView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,39,https://www.geeksforgeeks.org/websites-apps/software-and-tools-a-to-z-list/,Software & ToolsView more,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,40,https://www.geeksforgeeks.org/design-and-analysis-of-algorithms/,Analysis of Algorithms,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,41,https://www.geeksforgeeks.org/array-data-structure/,Array,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,42,https://www.geeksforgeeks.org/data-structures/linked-list/,Linked List,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,43,https://www.geeksforgeeks.org/searching-algorithms/,Searching Algorithms,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,44,https://www.geeksforgeeks.org/stack-data-structure/,Stack,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,45,https://www.geeksforgeeks.org/sorting-algorithms/,Sorting Algorithms,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,46,https://www.geeksforgeeks.org/hashing-data-structure/,Hashing,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,47,https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/,Graph,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,48,https://in.linkedin.com/company/geeksforgeeks,,,True
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,49,https://www.instagram.com/geeks_for_geeks/,,,True
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,50,https://twitter.com/geeksforgeeks,,,True
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,51,https://www.facebook.com/geeksforgeeks.org/,,,True
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,52,https://www.youtube.com/geeksforgeeksvideos,,,True
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,53,https://geeksforgeeksapp.page.link/gfg-app,,,True
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,54,https://www.geeksforgeeks.org/about/,About Us,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,55,https://www.geeksforgeeks.org/legal/,Legal,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,56,https://www.geeksforgeeks.org/legal/privacy-policy/,Privacy Policy,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,57,https://www.geeksforgeeks.org/jobs?search=geeksforgeeks&tab_type=featured,Careers,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,58,https://www.geeksforgeeks.org/about/contact-us/,Contact Us,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,59,https://www.geeksforgeeks.org/gfg-corporate-solution/,Corporate Solution,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,60,https://www.geeksforgeeks.org/problem-of-the-day,POTD,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,61,https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions,Practice Problems,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,62,https://www.geeksforgeeks.org/category/blogs/?type=recent,Blogs,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,63,https://www.geeksforgeeks.org/web-tech/web-technology/,Web Technology,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,64,https://www.geeksforgeeks.org/machine-learning/ai-ml-and-data-science-tutorial-learn-ai-ml-and-data-science/,"AI, ML & Data Science",,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,65,https://www.geeksforgeeks.org/gate/gate-exam-tutorial/,CS Core Subjects,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,66,https://www.geeksforgeeks.org/gfg-academy/geeksforgeeks-school/,School Subjects,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,67,https://www.geeksforgeeks.org/courses/category/machine-learning-data-science,ML and Data Science,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,68,https://www.geeksforgeeks.org/courses/category/dsa-placements,DSA and Placements,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,69,https://www.geeksforgeeks.org/courses/category/development-testing,Web Development,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,70,https://www.geeksforgeeks.org/courses/category/programming-languages,Programming Languages,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,71,https://www.geeksforgeeks.org/courses/category/cloud-devops,DevOps & Cloud,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,72,https://www.geeksforgeeks.org/courses/category/gate,GATE,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,73,https://www.geeksforgeeks.org/courses/category/trending-technologies/,Trending Technologies,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,74,https://www.geeksforgeeks.org/courses/offline-courses?city=noida,Noida,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,75,https://www.geeksforgeeks.org/courses/offline-courses?city=bengaluru,Bengaluru,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,76,https://www.geeksforgeeks.org/courses/offline-courses?city=pune,Pune,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,77,https://www.geeksforgeeks.org/courses/offline-courses?city=hyderabad,Hyderabad,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,78,https://www.geeksforgeeks.org/courses/offline-courses?selectedOfflineCity=Kolkata,Kolkata,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,79,https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/,Aptitude,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,80,https://www.geeksforgeeks.org/aptitude/puzzles/,Puzzles,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,81,https://www.geeksforgeeks.org/courses/gfg-160-series,GfG 160,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,82,https://www.geeksforgeeks.org/system-design/system-design-tutorial/,System Design,,False
+26d6f989-cf76-48a7-a7b0-3a545b5d250d,83,https://www.geeksforgeeks.org/copyright-information/,All rights reserved,,False

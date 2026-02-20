@@ -1,0 +1,979 @@
+[
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "title": "GeeksforGeeks | Your All-in-One Learning Portal",
+    "description": "Your All-in-One Learning Portal. It contains well written, well thought and well explained computer science and programming articles, quizzes and practice/competitive programming/company interview Questions.",
+    "scraped_at": "2026-02-08T23:48:10.959088",
+    "scraping_method": "static",
+    "text_content": "CoursesTutorialsPracticeJobsDSAPractice ProblemsC C++JavaPythonJavaScriptData ScienceMachine LearningCoursesLinuxDevOpsHello, What Do You Want To Learn?90% Refund on CoursesDSA OnlineMaster DS & MLFinish Your Course - Get Your Money Back!Available on Live, Online & Offline Learning ModesStep 1Complete payment for any courseStep 2Complete 90% of the course within 90 daysStep 3Claim your 90% refund of the course feeThree 90 Ends in :00d00h00m00sAccept the Challenge - Limited Time!Need help withCareer Guidance?Connect with trusted experts, anytime. Get real answers, real guidance, in real time.Explore Now1:1 Expert SessionsPersonalized FeedFlexible & AffordableBuild Your NetworkCoursesView All4.9Tech Interview 101 - DSA and System DesignBeginner to Advanced397k+ interested GeeksGet 90% Refund4.6Java Backend Development with AI - LiveIntermediate and Advanced393k+ interested GeeksGet 90% Refund5.0Generative AI Training Program - LiveBeginner to Advanced41k+ interested GeeksGet 90% Refund4.7DevOps Engineering with AI : Planning to ProductionBeginner to Advanced156k+ interested GeeksGet 90% Refund4.7C++ Programming - Self PacedBeginner to Advanced314k+ interested GeeksGet 90% Refund4.6Java Programming - Self PacedBeginner to Advanced422k+ interested GeeksGet 90% RefundMust ExploreJobs for youHire with usAdvertise with UsPlacement Training ProgramExploreData Structure and AlgorithmsView moreWeb DevelopmentView moreAI ML & Data ScienceView moreMachine LearningView morePythonView moreJavaView moreSystem DesignView moreDevOpsView moreProgramming LanguagesView moreCS SubjectsView morePractice DSAView moreInterview PreparationView moreDatabasesView moreSoftware & ToolsView moreMust ExploreJobs for youHire with usAdvertise with UsPlacement Training ProgramDSAView AllAnalysis of AlgorithmsArrayLinked ListSearching AlgorithmsStackSorting AlgorithmsHashingGraphCorporate & Communications Address:A-143, 7th Floor, Sovereign Corporate Tower, Sector- 136, Noida, Uttar Pradesh (201305)Registered Address:K 061, Tower K, Gulshan Vivante Apartment, Sector 137, Noida, Gautam Buddh Nagar, Uttar Pradesh, 201305CompanyAbout UsLegalPrivacy PolicyCareersContact UsCorporate SolutionCampus Training ProgramExplorePOTDPractice ProblemsConnectBlogs90% Refund on CoursesTutorialsProgramming LanguagesDSAWeb TechnologyAI, ML & Data ScienceDevOpsCS Core SubjectsGATESchool SubjectsSoftware and ToolsCoursesML and Data ScienceDSA and PlacementsWeb DevelopmentData ScienceProgramming LanguagesDevOps & CloudGATETrending TechnologiesOffline CentersNoidaBengaluruPuneHyderabadKolkataPreparation CornerInterview CornerAptitudePuzzlesGfG 160System Design@GeeksforGeeks, Sanchhaya Education Private Limited, All rights reserved",
+    "paragraphs_count": 7,
+    "headings_count": 7,
+    "links_count": 83,
+    "images_count": 21,
+    "forms_count": 1
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 1,
+    "link_url": "https://www.geeksforgeeks.org/",
+    "link_text": "",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 2,
+    "link_url": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/",
+    "link_text": "DSA",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 3,
+    "link_url": "https://www.geeksforgeeks.org/explore",
+    "link_text": "Practice Problems",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 4,
+    "link_url": "https://www.geeksforgeeks.org/c/c-programming-language/",
+    "link_text": "C",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 5,
+    "link_url": "https://www.geeksforgeeks.org/cpp/c-plus-plus/",
+    "link_text": "C++",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 6,
+    "link_url": "https://www.geeksforgeeks.org/java/java/",
+    "link_text": "Java",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 7,
+    "link_url": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial/",
+    "link_text": "Python",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 8,
+    "link_url": "https://www.geeksforgeeks.org/javascript/javascript-tutorial/",
+    "link_text": "JavaScript",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 9,
+    "link_url": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners/",
+    "link_text": "Data Science",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 10,
+    "link_url": "https://www.geeksforgeeks.org/machine-learning/machine-learning/",
+    "link_text": "Machine Learning",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 11,
+    "link_url": "https://www.geeksforgeeks.org/courses",
+    "link_text": "Courses",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 12,
+    "link_url": "https://www.geeksforgeeks.org/linux-unix/linux-tutorial/",
+    "link_text": "Linux",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 13,
+    "link_url": "https://www.geeksforgeeks.org/devops/devops-tutorial/",
+    "link_text": "DevOps",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 14,
+    "link_url": "https://www.geeksforgeeks.org/courses/dsa-self-paced",
+    "link_text": "DSA Online",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 15,
+    "link_url": "https://www.geeksforgeeks.org/courses/data-science-live",
+    "link_text": "Master DS & ML",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 16,
+    "link_url": "https://www.geeksforgeeks.org/connect/home",
+    "link_text": "Explore Now",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 17,
+    "link_url": "https://www.geeksforgeeks.org/courses/interviewe-101-data-structures-algorithm-system-design/",
+    "link_text": "4.9Tech Interview 101 - DSA and System DesignBeginner to Advanced397k+ interested GeeksGet 90% Refund",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 18,
+    "link_url": "https://www.geeksforgeeks.org/courses/Java-backend-live/",
+    "link_text": "4.6Java Backend Development with AI - LiveIntermediate and Advanced393k+ interested GeeksGet 90% Refund",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 19,
+    "link_url": "https://www.geeksforgeeks.org/courses/generative-ai-training-program/",
+    "link_text": "5.0Generative AI Training Program - LiveBeginner to Advanced41k+ interested GeeksGet 90% Refund",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 20,
+    "link_url": "https://www.geeksforgeeks.org/courses/devops-live/",
+    "link_text": "4.7DevOps Engineering with AI : Planning to ProductionBeginner to Advanced156k+ interested GeeksGet 90% Refund",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 21,
+    "link_url": "https://www.geeksforgeeks.org/courses/cpp-programming-basic-to-advanced/",
+    "link_text": "4.7C++ Programming - Self PacedBeginner to Advanced314k+ interested GeeksGet 90% Refund",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 22,
+    "link_url": "https://www.geeksforgeeks.org/courses/java-online-course-complete-beginner-to-advanced/",
+    "link_text": "4.6Java Programming - Self PacedBeginner to Advanced422k+ interested GeeksGet 90% Refund",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 23,
+    "link_url": "https://www.geeksforgeeks.org/jobs",
+    "link_text": "Jobs for you",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 24,
+    "link_url": "https://www.geeksforgeeks.org/gfg-hiring-solutions-for-recruiters/",
+    "link_text": "Hire with us",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 25,
+    "link_url": "https://www.geeksforgeeks.org/advertise-with-us/",
+    "link_text": "Advertise with Us",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 26,
+    "link_url": "https://www.geeksforgeeks.org/campus-training-program/",
+    "link_text": "Placement Training Program",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 27,
+    "link_url": "https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial/",
+    "link_text": "Data Structure and AlgorithmsView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 28,
+    "link_url": "https://www.geeksforgeeks.org/web-development/",
+    "link_text": "Web DevelopmentView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 29,
+    "link_url": "https://www.geeksforgeeks.org/ai-ml-ds/",
+    "link_text": "AI ML & Data ScienceView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 30,
+    "link_url": "https://www.geeksforgeeks.org/machine-learning/",
+    "link_text": "Machine LearningView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 31,
+    "link_url": "https://www.geeksforgeeks.org/python-programming-language/",
+    "link_text": "PythonView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 32,
+    "link_url": "https://www.geeksforgeeks.org/system-design-tutorial/",
+    "link_text": "System DesignView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 33,
+    "link_url": "https://www.geeksforgeeks.org/devops-tutorial/",
+    "link_text": "DevOpsView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 34,
+    "link_url": "https://www.geeksforgeeks.org/computer-science-fundamentals/programming-language-tutorials/",
+    "link_text": "Programming LanguagesView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 35,
+    "link_url": "https://www.geeksforgeeks.org/software-engineering/articles-on-computer-science-subjects-gq/",
+    "link_text": "CS SubjectsView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 36,
+    "link_url": "https://www.geeksforgeeks.org/blogs/geeksforgeeks-practice-best-online-coding-platform/",
+    "link_text": "Practice DSAView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 37,
+    "link_url": "https://www.geeksforgeeks.org/interview-prep/interview-corner/",
+    "link_text": "Interview PreparationView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 38,
+    "link_url": "https://www.geeksforgeeks.org/sql/guide-to-databases/",
+    "link_text": "DatabasesView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 39,
+    "link_url": "https://www.geeksforgeeks.org/websites-apps/software-and-tools-a-to-z-list/",
+    "link_text": "Software & ToolsView more",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 40,
+    "link_url": "https://www.geeksforgeeks.org/design-and-analysis-of-algorithms/",
+    "link_text": "Analysis of Algorithms",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 41,
+    "link_url": "https://www.geeksforgeeks.org/array-data-structure/",
+    "link_text": "Array",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 42,
+    "link_url": "https://www.geeksforgeeks.org/data-structures/linked-list/",
+    "link_text": "Linked List",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 43,
+    "link_url": "https://www.geeksforgeeks.org/searching-algorithms/",
+    "link_text": "Searching Algorithms",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 44,
+    "link_url": "https://www.geeksforgeeks.org/stack-data-structure/",
+    "link_text": "Stack",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 45,
+    "link_url": "https://www.geeksforgeeks.org/sorting-algorithms/",
+    "link_text": "Sorting Algorithms",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 46,
+    "link_url": "https://www.geeksforgeeks.org/hashing-data-structure/",
+    "link_text": "Hashing",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 47,
+    "link_url": "https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/",
+    "link_text": "Graph",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 48,
+    "link_url": "https://in.linkedin.com/company/geeksforgeeks",
+    "link_text": "",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 49,
+    "link_url": "https://www.instagram.com/geeks_for_geeks/",
+    "link_text": "",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 50,
+    "link_url": "https://twitter.com/geeksforgeeks",
+    "link_text": "",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 51,
+    "link_url": "https://www.facebook.com/geeksforgeeks.org/",
+    "link_text": "",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 52,
+    "link_url": "https://www.youtube.com/geeksforgeeksvideos",
+    "link_text": "",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 53,
+    "link_url": "https://geeksforgeeksapp.page.link/gfg-app",
+    "link_text": "",
+    "link_title": "",
+    "is_external": true
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 54,
+    "link_url": "https://www.geeksforgeeks.org/about/",
+    "link_text": "About Us",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 55,
+    "link_url": "https://www.geeksforgeeks.org/legal/",
+    "link_text": "Legal",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 56,
+    "link_url": "https://www.geeksforgeeks.org/legal/privacy-policy/",
+    "link_text": "Privacy Policy",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 57,
+    "link_url": "https://www.geeksforgeeks.org/jobs?search=geeksforgeeks&tab_type=featured",
+    "link_text": "Careers",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 58,
+    "link_url": "https://www.geeksforgeeks.org/about/contact-us/",
+    "link_text": "Contact Us",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 59,
+    "link_url": "https://www.geeksforgeeks.org/gfg-corporate-solution/",
+    "link_text": "Corporate Solution",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 60,
+    "link_url": "https://www.geeksforgeeks.org/problem-of-the-day",
+    "link_text": "POTD",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 61,
+    "link_url": "https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions",
+    "link_text": "Practice Problems",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 62,
+    "link_url": "https://www.geeksforgeeks.org/category/blogs/?type=recent",
+    "link_text": "Blogs",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 63,
+    "link_url": "https://www.geeksforgeeks.org/web-tech/web-technology/",
+    "link_text": "Web Technology",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 64,
+    "link_url": "https://www.geeksforgeeks.org/machine-learning/ai-ml-and-data-science-tutorial-learn-ai-ml-and-data-science/",
+    "link_text": "AI, ML & Data Science",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 65,
+    "link_url": "https://www.geeksforgeeks.org/gate/gate-exam-tutorial/",
+    "link_text": "CS Core Subjects",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 66,
+    "link_url": "https://www.geeksforgeeks.org/gfg-academy/geeksforgeeks-school/",
+    "link_text": "School Subjects",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 67,
+    "link_url": "https://www.geeksforgeeks.org/courses/category/machine-learning-data-science",
+    "link_text": "ML and Data Science",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 68,
+    "link_url": "https://www.geeksforgeeks.org/courses/category/dsa-placements",
+    "link_text": "DSA and Placements",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 69,
+    "link_url": "https://www.geeksforgeeks.org/courses/category/development-testing",
+    "link_text": "Web Development",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 70,
+    "link_url": "https://www.geeksforgeeks.org/courses/category/programming-languages",
+    "link_text": "Programming Languages",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 71,
+    "link_url": "https://www.geeksforgeeks.org/courses/category/cloud-devops",
+    "link_text": "DevOps & Cloud",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 72,
+    "link_url": "https://www.geeksforgeeks.org/courses/category/gate",
+    "link_text": "GATE",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 73,
+    "link_url": "https://www.geeksforgeeks.org/courses/category/trending-technologies/",
+    "link_text": "Trending Technologies",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 74,
+    "link_url": "https://www.geeksforgeeks.org/courses/offline-courses?city=noida",
+    "link_text": "Noida",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 75,
+    "link_url": "https://www.geeksforgeeks.org/courses/offline-courses?city=bengaluru",
+    "link_text": "Bengaluru",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 76,
+    "link_url": "https://www.geeksforgeeks.org/courses/offline-courses?city=pune",
+    "link_text": "Pune",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 77,
+    "link_url": "https://www.geeksforgeeks.org/courses/offline-courses?city=hyderabad",
+    "link_text": "Hyderabad",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 78,
+    "link_url": "https://www.geeksforgeeks.org/courses/offline-courses?selectedOfflineCity=Kolkata",
+    "link_text": "Kolkata",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 79,
+    "link_url": "https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/",
+    "link_text": "Aptitude",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 80,
+    "link_url": "https://www.geeksforgeeks.org/aptitude/puzzles/",
+    "link_text": "Puzzles",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 81,
+    "link_url": "https://www.geeksforgeeks.org/courses/gfg-160-series",
+    "link_text": "GfG 160",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 82,
+    "link_url": "https://www.geeksforgeeks.org/system-design/system-design-tutorial/",
+    "link_text": "System Design",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "link",
+    "link_number": 83,
+    "link_url": "https://www.geeksforgeeks.org/copyright-information/",
+    "link_text": "All rights reserved",
+    "link_title": "",
+    "is_external": false
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 1,
+    "image_src": "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
+    "image_alt": "geeksforgeeks",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 2,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/image-3.svg",
+    "image_alt": "three90 challenge",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 3,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/image-6.svg",
+    "image_alt": "step icon",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 4,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/Vectors.svg",
+    "image_alt": "arrow",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 5,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/Rectangle.svg",
+    "image_alt": "step icon",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 6,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/image-41.svg",
+    "image_alt": "step icon",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 7,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/file3.svg",
+    "image_alt": "Mentor",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 8,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/Frame-1000001823.svg",
+    "image_alt": "Personalized Feed",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 9,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/Frame-10000018241.svg",
+    "image_alt": "Interview Experiences",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 10,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/Frame-1000001823-7.svg",
+    "image_alt": "Job Openings & Updates",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 11,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/Frame-1000001823-8.svg",
+    "image_alt": "Internship Opportunities",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 12,
+    "image_src": "https://media.geeksforgeeks.org/wp-content/uploads/20250929101624249259/tech_interview.webp",
+    "image_alt": "course-img",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 13,
+    "image_src": "https://media.geeksforgeeks.org/wp-content/uploads/20251119100432783088/JBDL1.webp",
+    "image_alt": "course-img",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 14,
+    "image_src": "https://media.geeksforgeeks.org/wp-content/uploads/20251010124253058806/generative-ai-training-program-.webp",
+    "image_alt": "course-img",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 15,
+    "image_src": "https://media.geeksforgeeks.org/wp-content/uploads/20260109134146052260/devops_engineering.webp",
+    "image_alt": "course-img",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 16,
+    "image_src": "https://media.geeksforgeeks.org/img-practice/prod/courses/221/Web/Content/cpp_1723009538.webp",
+    "image_alt": "course-img",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 17,
+    "image_src": "https://media.geeksforgeeks.org/img-practice/prod/courses/270/Web/Content/CourseJavaProgrammin_1716371938.webp",
+    "image_alt": "course-img",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 18,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/gfgFooterLogo.png",
+    "image_alt": "GeeksforGeeks",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 19,
+    "image_src": "https://media.geeksforgeeks.org/img-practice/Location-1685004904.svg",
+    "image_alt": "location",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 20,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/googleplay-%281%29.png",
+    "image_alt": "GFG App on Play Store",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "image",
+    "image_number": 21,
+    "image_src": "https://media.geeksforgeeks.org/auth-dashboard-uploads/appstore-%281%29.png",
+    "image_alt": "GFG App on App Store",
+    "image_title": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "heading",
+    "heading_number": 1,
+    "heading_level": 3,
+    "heading_text": "Finish Your Course - Get Your Money Back!"
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "heading",
+    "heading_number": 2,
+    "heading_level": 1,
+    "heading_text": "Need help withCareer Guidance?"
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "heading",
+    "heading_number": 3,
+    "heading_level": 2,
+    "heading_text": "Courses"
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "heading",
+    "heading_number": 4,
+    "heading_level": 2,
+    "heading_text": "Must Explore"
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "heading",
+    "heading_number": 5,
+    "heading_level": 2,
+    "heading_text": "Explore"
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "heading",
+    "heading_number": 6,
+    "heading_level": 2,
+    "heading_text": "Must Explore"
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/",
+    "record_type": "heading",
+    "heading_number": 7,
+    "heading_level": 2,
+    "heading_text": "DSA"
+  }
+]

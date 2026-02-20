@@ -1,0 +1,2 @@
+page_id,url,title,scraped_at,text_length,paragraph_count,heading_count,image_count,form_count,http_status_code,response_time_ms
+b70bc479-38cc-4d10-9f43-d7f25d7ff60e,https://www.geeksforgeeks.org/,GeeksforGeeks | Your All-in-One Learning Portal,2026-02-16T18:13:46.662213+00:00,2722,7,7,21,1,200,31
