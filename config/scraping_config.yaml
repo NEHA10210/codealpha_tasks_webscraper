@@ -1,0 +1,58 @@
+captcha_detection:
+  enabled: true
+  indicators:
+  - captcha
+  - recaptcha
+  - hcaptcha
+  - verify
+  - prove
+  - robot
+  - human
+  stop_on_captcha: true
+data_processing:
+  clean_text: true
+  normalize_urls: true
+  remove_duplicates: true
+  validate_fields: true
+dynamic_scraping:
+  headless: true
+  max_scroll_attempts: 5
+  scroll_delay: 1000
+  wait_strategy: networkidle
+scraping:
+  default_delay: 1.0
+  max_retries: 3
+  rate_limit:
+    burst_size: 5
+    delay_after_burst: 5.0
+    requests_per_second: 1
+  respect_robots: true
+  timeout: 30
+  user_agent: EthicalWebScraper/1.0 (Educational Purpose)
+selectors:
+  content:
+  - main
+  - article
+  - .content
+  - '#content'
+  headings:
+  - h1
+  - h2
+  - h3
+  - h4
+  - h5
+  - h6
+  images:
+  - img[src]
+  links:
+  - a[href]
+  lists:
+  - ul
+  - ol
+  paragraphs:
+  - p
+  title:
+  - title
+  - h1
+  - '[property="og:title"]'
+  - .title
